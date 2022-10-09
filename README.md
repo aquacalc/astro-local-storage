@@ -1,64 +1,45 @@
-# Astro Starter Kit: Blog
+# How can I get the window object in an .mdx file?
 
 ```
-npm create astro@latest -- --template blog
+import Test from "../components/Test.svelte";
+
+<Test client:only />
+
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
-
 Features:
 
-- ✅ Minimal styling (make it your own!)
+- ✅ Test.svelte persists a Svelte store to local storage using the window object.
 - ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
 
-## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+	<p>
+		* I can import & use Test.svelte in an .astro file with the <a
+      href="https://docs.astro.build/en/reference/directives-reference/#clientonly"
+      target="_blank"
+      rel="noopener noreferrer">client:only</a
+    > directive, <a
+		href="https://docs.astro.build/en/guides/troubleshooting/#common-cause"
+		target="_blank"
+		rel="noopener noreferrer">as per the docs</a
+	>. See <a href="/good-to-go">here</a>.
+  </p>
 
-```
-├── public/
-├── src/
-│   ├── components/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+	<p>
+		* But when I run the same code in an .mdx file, I get the <mark>"Window is not defined"</mark> error. See <a href="/no-go">here</a>.
+	</p>
+	
+	<p>
+		(Svelte components that don't depend on window run as expected in .mdx.)
+	</p>
+  The same import that works in the .astro file
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<div style='text-align: center; font-size: 1.25rem;'>
+<pre style="padding: 0;">import Test from "../components/Test.svelte";</pre>
+</div>
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+throws <mark>"Window is not defined" in this .mdx file</mark> (/pages/no-go.mdx).
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+![yadda](/window-is-not-defined.png)
