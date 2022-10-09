@@ -1,0 +1,19 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header />
+		<hr />
+		<main>
+			<slot />
+		</main>
+		<!-- <Footer /> -->
+	</body>
+</html>

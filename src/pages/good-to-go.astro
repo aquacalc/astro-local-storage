@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Test from "../components/Test.svelte";
+---
+
+<Layout>
+  <p>
+    This .astro file imports Test.svelte, uses the <a
+      href="https://docs.astro.build/en/reference/directives-reference/#clientonly"
+      target="_blank"
+      rel="noopener noreferrer">client:only</a
+    > directive, and persists entered data to local storage.
+  </p>
+
+  <hr />
+
+  <Test client:only />
+</Layout>

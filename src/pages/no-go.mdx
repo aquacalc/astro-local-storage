@@ -1,0 +1,26 @@
+---
+layout: "../layouts/Layout.astro"
+title: "This doesn't in .mdx"
+description: "Lorem ipsum dolor sit amet"
+# updatedDate: "August 08 2022"
+# heroImage: "/placeholder-about.jpg"
+---
+
+import Test_NoLocalStorage from "../components/Test_NoLocalStorage.svelte";
+
+The same import that works in the .astro file
+
+<div style='text-align: center; font-size: 1.25rem;'>
+<pre style="padding: 0;">import Test from "../components/Test.svelte";</pre>
+</div>
+
+throws <mark>"Window is not defined" in this .mdx file</mark> (/pages/no-go.mdx).
+
+![yadda](/window-is-not-defined.png)
+
+<hr />
+
+An imported Svelte component without a dependency on the window object works as expected:
+<Test_NoLocalStorage client:only />
+
+<hr />
