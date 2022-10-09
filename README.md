@@ -1,4 +1,4 @@
-# How can I get the `window` object in an .mdx file?
+# How can I get `window` in an `.mdx` file?
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
 
@@ -17,3 +17,5 @@
 !["window is not defined"](./public/window-is-not-defined.png)
 
 - ✅ (Svelte components that don't depend on `window` run as expected in .mdx.)
+
+# How can I get `window` in the `.mdx` file?
