@@ -14,11 +14,9 @@
     $myStoredValue.myValue = data.target.value;
   };
   
-  const handleKeydown = (e) => {console.log(`Key Down: ${e.key}`)}
 </script>
 
-<svelte:window on:loadeddata={() => console.log('DOM loaded')} />
-  <!-- <svelte:window on:keydown={handleKeydown}/> -->
+<!-- <svelte:window on:loadeddata={() => console.log('DOM loaded')} /> -->
 
 <label for="test">
   Enter a value...

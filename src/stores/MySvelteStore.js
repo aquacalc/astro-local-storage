@@ -1,7 +1,11 @@
 import { writable } from "svelte/store";
 // import LZString from "lz-string";
 
+// From Dean Fogarty's Fall 2021 Svelte Summit video
+// see: https://www.youtube.com/watch?v=85Gc-i0ITf8
+
 const myStore = (name, initialValue, toStorage = [], fromStorage = []) => {
+  // Getting the window object for import to a .astro file
   // see: https://docs.astro.build/en/guides/troubleshooting/#common-cause
   // "This can be caused by attempting to access the window or document object
   // at render time. By default, Astro will render your component isomorphically,
