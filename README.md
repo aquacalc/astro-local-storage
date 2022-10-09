@@ -1,6 +1,6 @@
 # How can I get `window` in an `.mdx` file?
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/astro-jtddy8?file=README.md)
 
 
 - ✅ Test.svelte persists a Svelte store to local storage using the `window` object.
@@ -16,6 +16,6 @@
 
 !["window is not defined"](./public/window-is-not-defined.png)
 
-- ✅ (Svelte components that don't depend on `window` run as expected in .mdx.)
+- ✅ (Svelte components that don't depend on `window` run as expected in a `.mdx` file.)
 
 # How can I get `window` in the `.mdx` file?
