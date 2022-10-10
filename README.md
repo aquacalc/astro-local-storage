@@ -3,7 +3,7 @@
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/astro-jtddy8?file=README.md)
 
 
-- ✅ Test.svelte persists a Svelte store to local storage using the `window` object.
+- ✅ `Test.svelte` persists a Svelte store to local storage using the `window` object.
 - ✅ I can import & use `Test.svelte` in `/src/pages/good-to-go.astro` with the <a href="https://docs.astro.build/en/reference/directives-reference/#clientonly" target="_blank" rel="noopener noreferrer">`client:only`</a> directive, <a href="https://docs.astro.build/en/guides/troubleshooting/#common-cause" target="_blank" rel="noopener noreferrer">as per the docs</a>:
 
 ```
