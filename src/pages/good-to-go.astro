@@ -6,11 +6,27 @@ import Test from "../components/Test.svelte";
 
 <Layout>
   <p>
-    This .astro file imports Test.svelte, uses the <a
+    This <code>.astro</code> file (<code>/pages/good-to-go.astro</code>) imports <code>Test.svelte</code>
+  </p>
+
+  <code style="margin-left: 3rem;">
+    import Test from "../components/Test.svelte";
+  </code>
+
+  <p>
+    uses the <a
       href="https://docs.astro.build/en/reference/directives-reference/#clientonly"
       target="_blank"
       rel="noopener noreferrer">client:only</a
-    > directive, and persists entered data to local storage.
+    > directive
+  </p>
+
+  <code style="margin-left: 3rem;">
+    &#60;Test client:only /&#62;
+  </code>
+
+  <p>
+    and persists entered data to local storage. No problems.
   </p>
 
   <hr />

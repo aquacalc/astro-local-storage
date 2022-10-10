@@ -19,7 +19,7 @@
 <!-- <svelte:window on:loadeddata={() => console.log('DOM loaded')} /> -->
 
 <label for="test">
-  Enter a value...
+  Enter a value:
   <input id="test" on:input={handleChange} bind:value={number} />
 </label>
 

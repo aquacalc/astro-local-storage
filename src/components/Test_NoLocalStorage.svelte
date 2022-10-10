@@ -16,7 +16,7 @@
   </label>
 
   <h4>
-    The number is <span>{number}</span>.
+    Entered <span>{number}</span> (no local storage).
   </h4>
 </div>
 

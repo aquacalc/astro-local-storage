@@ -5,15 +5,15 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 
 	<p>
-		Test.svelte persists a Svelte store to local storage using the window object.
+		<code>Test.svelte</code> persists a Svelte store to local storage using the <code>window</code> object.
 	</p>
 
 	<p>
-		* I can import & use Test.svelte in an .astro file with the <a
+		* I can import & use <code>Test.svelte</code> in an <code>.astro</code> file with the <a
       href="https://docs.astro.build/en/reference/directives-reference/#clientonly"
       target="_blank"
       rel="noopener noreferrer">client:only</a
-    > directive, <a
+    > directive <a
 		href="https://docs.astro.build/en/guides/troubleshooting/#common-cause"
 		target="_blank"
 		rel="noopener noreferrer">as per the docs</a
@@ -21,12 +21,14 @@ import Layout from "../layouts/Layout.astro";
   </p>
 	
 	<p>
-		* But when I run the same code in an .mdx file, I get the <mark>"Window is not defined"</mark> error. See <a href="/no-go">here</a>.
+		* But when I run the same code in an <code>.mdx</code> file, I get the <mark>"Window is not defined"</mark> error. See <a href="/no-go">here</a>.
 	</p>
 	
 	<p>
-		(Svelte components that don't depend on window run as expected in .mdx.)
+		(Svelte components that don't depend on <code>window</code> run as expected in <code>.mdx</code>.)
 	</p>
 
   <hr />
+
+	<h2>How can I get <code>window</code> in an <code>.mdx</code> file?</h2>
 </Layout>
